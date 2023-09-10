@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
+    <title>Rubik's Cube Timer</title>
 </head>
 <body>
-    <h1 id="hi">KevCube</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-    <p></p>
-    <p></p>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+    <div class="container">
+        <div class="buttons">
+            <button id="start" onmousedown="start()" onmouseup="end()"><img src="img/hand.jpg"></button>
+        </div>
+        <div class="timer">
+            00.00
+        </div>
+        <div class="buttons">
+            <button id="start" onmousedown="start()" onmouseup="end()"><img src="img/hand.jpg" alt="Image"></button>
+        </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
