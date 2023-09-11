@@ -3,20 +3,40 @@ let timeRef = document.querySelector(".timer");
 let int = null;
 var count = 0;
 var counter;
+var timer;
 
 let hands = document.querySelectorAll(".buttons");
+let s = document.getElementById("start");
+
+
+var counter;
+var count = 0;
 
 function start() {
-    counter = setInterval(count++, 10);
+    hands.forEach(x => x.classList.add('red'));
+    counter = setInterval(
+        function() {
+            count++;
+            if (count > 1) {
+                hands.forEach(x => x.classList.add('green'));
+            }
+        }, 200);
+}
+function end() {
+    clearInterval(counter);
+    hands.forEach(x => x.classList.remove('red'));
+    hands.forEach(x => x.classList.remove('green'));
+    if (count > 1) {
+        timer = setInterval(displayTimer, 10);
+        document.addEventListener('keyup', event => {
+            if (event.code === 'Space') {
+              clearInterval(timer)
+            }
+    })
+    count = 0;
+}
 }
 
-function end() {
-    setInterval(displayTimer(), 10);
-    if (counter > 0) {
-        setInterval(displayTimer(), 10);
-    }
-    clearInterval(counter)
-}
 
 function displayTimer() {
     milliseconds += 10;

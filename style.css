@@ -63,3 +63,13 @@ body {
     height: 100%;
     width: 100%;
 }
+
+.buttons.red button {
+    background-color: #c0392b;
+    box-shadow: 0 0 20px 5px #c0392b;
+}
+
+.buttons.green button {
+    background-color: #2ecc71;
+    box-shadow: 0 0 20px 5px #2ecc71;
+}
